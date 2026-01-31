@@ -1,0 +1,201 @@
+timestamp,chatter,channel,likes,cluster_id,cluster_label,scenario_from_cluster
+2026-01-24T12:14:00+04:00,got a fake call asking for my OTP Please stay alert. #uae This is happening a lot lately.,social_media,5.0,0,"thread, otp, update",scam/rumor
+2026-01-24T13:32:00+04:00,3★ transfer isn't going through right now,app_store,,2,"message, error message, error",service/incident
+2026-01-24T14:09:00+04:00,received an SMS with a suspicious link Please stay alert. (thread),public_forum,,0,"thread, otp, update",scam/rumor
+2026-01-24T14:11:00+04:00,"It works most days, but outages are too frequent. (thread)",public_forum,,0,"thread, otp, update",scam/rumor
+2026-01-24T16:11:00+04:00,login keeps failing worked fine yesterday (thread),public_forum,,2,"message, error message, error",service/incident
+2026-01-24T17:20:00+04:00,Service has been disappointing lately. (thread),public_forum,,7,"lately, disappointing lately, service disappointing",service/incident
+2026-01-24T21:37:00+04:00,"got a fake call asking for my OTP Don't share OTPs. 🙏 I tried reinstalling, no luck",social_media,9.0,0,"thread, otp, update",scam/rumor
+2026-01-24T21:55:00+04:00,Support is taking forever to respond. — This is happening a lot lately.,social_media,6.0,7,"lately, disappointing lately, service disappointing",service/incident
+2026-01-25T01:03:00+04:00,ATM didn't dispense cash but account was debited support line is busy,community_chat,,3,"account, didn dispense, dispense cash",other/unclear
+2026-01-25T02:02:00+04:00,transfer isn't going through for the last hour,community_chat,,2,"message, error message, error",service/incident
+2026-01-25T06:02:00+04:00,"Love the rewards, hate the downtime. #uae",social_media,27.0,2,"message, error message, error",service/incident
+2026-01-25T07:21:00+04:00,"Mixed experience: branch was great, app was not. Overall experience: good",review_site,,5,"experience, mixed, app",brand sentiment
+2026-01-25T07:30:00+04:00,"It works most days, but outages are too frequent. Overall experience: mixed",review_site,,5,"experience, mixed, app",brand sentiment
+2026-01-25T07:47:00+04:00,"Love the rewards, hate the downtime. Overall experience: okay",review_site,,5,"experience, mixed, app",brand sentiment
+2026-01-25T09:38:00+04:00,In the comments: someone posted that fees increased overnight. Sounds unverified.,news_comment,,6,"fees, increased overnight, posted fees",brand sentiment
+2026-01-25T10:15:00+04:00,4★ received an SMS with a suspicious link Sharing so others don't fall for it.,app_store,,4,"got, declined, card",service/incident
+2026-01-25T17:51:00+04:00,OTP not arriving since this morning (thread),public_forum,,0,"thread, otp, update",scam/rumor
+2026-01-25T18:03:00+04:00,2★ got a fake call asking for my OTP Report it if you get it.,app_store,,0,"thread, otp, update",scam/rumor
+2026-01-25T19:44:00+04:00,App feels faster lately. Overall experience: okay,review_site,,5,"experience, mixed, app",brand sentiment
+2026-01-25T23:11:00+04:00,balance isn't updating again today #app,social_media,2.0,0,"thread, otp, update",scam/rumor
+2026-01-26T01:28:00+04:00,4★ posts claiming services are shutting down. Can anyone confirm?,app_store,,2,"message, error message, error",service/incident
+2026-01-26T02:47:00+04:00,received an SMS with a suspicious link Sharing so others don't fall for it. 🤦 since this morning,social_media,5.0,4,"got, declined, card",service/incident
+2026-01-26T02:59:00+04:00,Can't log in support line is busy — Sounds unverified.,social_media,10.0,2,"message, error message, error",service/incident
+2026-01-26T03:11:00+04:00,"1★ Mixed experience: branch was great, app was not.",app_store,,5,"experience, mixed, app",brand sentiment
+2026-01-26T03:27:00+04:00,login keeps failing right now,community_chat,,4,"got, declined, card",service/incident
+2026-01-26T06:15:00+04:00,seeing unverified claims about policy changes. Can anyone confirm?,community_chat,,2,"message, error message, error",service/incident
+2026-01-26T07:28:00+04:00,In the comments: session keeps timing out again today,news_comment,,0,"thread, otp, update",scam/rumor
+2026-01-26T08:07:00+04:00,login keeps failing right now (thread),public_forum,,4,"got, declined, card",service/incident
+2026-01-26T09:28:00+04:00,The new rewards are nice.,community_chat,,2,"message, error message, error",service/incident
+2026-01-26T11:02:00+04:00,"login keeps failing support line is busy 😡 I tried reinstalling, no luck",social_media,4.0,2,"message, error message, error",service/incident
+2026-01-26T11:38:00+04:00,"In the comments: Issue got resolved quickly, thanks.",news_comment,,4,"got, declined, card",service/incident
+2026-01-26T14:06:00+04:00,"Love the rewards, hate the downtime.",community_chat,,2,"message, error message, error",service/incident
+2026-01-26T17:10:00+04:00,transfer isn't going through this is getting frustrating Overall experience: mixed,review_site,,5,"experience, mixed, app",brand sentiment
+2026-01-26T17:33:00+04:00,1★ online banking is super slow this is getting frustrating,app_store,,1,"online, super slow, super",service/incident
+2026-01-26T17:59:00+04:00,payments failing this is getting frustrating Overall experience: mixed,review_site,,5,"experience, mixed, app",brand sentiment
+2026-01-26T18:00:00+04:00,Shoutout to the branch staff today 🙌. Always verify via official channels.,social_media,0.0,5,"experience, mixed, app",brand sentiment
+2026-01-26T20:18:00+04:00,1★ hearing rumors about a data breach. Take with a grain of salt.,app_store,,2,"message, error message, error",service/incident
+2026-01-27T00:10:00+04:00,balance isn't updating after the update Overall experience: good,review_site,,5,"experience, mixed, app",brand sentiment
+2026-01-27T00:24:00+04:00,Support is taking forever to respond. right now,social_media,4.0,2,"message, error message, error",service/incident
+2026-01-27T01:22:00+04:00,someone posted that fees increased overnight. No official source though. 🚨 again today,social_media,6.0,6,"fees, increased overnight, posted fees",brand sentiment
+2026-01-27T02:05:00+04:00,4★ received an SMS with a suspicious link Don't share OTPs.,app_store,,4,"got, declined, card",service/incident
+2026-01-27T02:31:00+04:00,a 'loan offer' message that looks shady Always verify via official channels. (thread),public_forum,,2,"message, error message, error",service/incident
+2026-01-27T02:53:00+04:00,Customer support was actually helpful. (thread),public_forum,,0,"thread, otp, update",scam/rumor
+2026-01-27T02:57:00+04:00,transfer isn't going through right now #customerservice,social_media,7.0,2,"message, error message, error",service/incident
+2026-01-27T05:49:00+04:00,transfer isn't going through after the update (thread),public_forum,,0,"thread, otp, update",scam/rumor
+2026-01-27T06:14:00+04:00,Not happy with the recent changes. 😩 Take with a grain of salt.,social_media,7.0,2,"message, error message, error",service/incident
+2026-01-27T06:59:00+04:00,Support is taking forever to respond. Overall experience: mixed,review_site,,5,"experience, mixed, app",brand sentiment
+2026-01-27T08:29:00+04:00,2★ payments failing worked fine yesterday,app_store,,2,"message, error message, error",service/incident
+2026-01-27T09:59:00+04:00,In the comments: seeing unverified claims about policy changes. Take with a grain of salt.,news_comment,,2,"message, error message, error",service/incident
+2026-01-27T10:05:00+04:00,"It works most days, but outages are too frequent. (thread)",public_forum,,0,"thread, otp, update",scam/rumor
+2026-01-27T10:29:00+04:00,seeing unverified claims about policy changes. Hope it's not true. (thread),public_forum,,2,"message, error message, error",service/incident
+2026-01-27T11:49:00+04:00,Customer support was actually helpful. (thread),public_forum,,0,"thread, otp, update",scam/rumor
+2026-01-27T12:21:00+04:00,got a fake call asking for my OTP Don't share OTPs. Overall experience: okay,review_site,,0,"thread, otp, update",scam/rumor
+2026-01-27T12:56:00+04:00,card got declined right now #onlineservices Don't share OTPs.,social_media,12.0,4,"got, declined, card",service/incident
+2026-01-27T14:16:00+04:00,In the comments: Had a smooth experience opening an account.,news_comment,,3,"account, didn dispense, dispense cash",other/unclear
+2026-01-27T15:19:00+04:00,login keeps failing again today #onlineservices Don't share OTPs.,social_media,5.0,4,"got, declined, card",service/incident
+2026-01-27T15:49:00+04:00,"2★ Mixed experience: branch was great, app was not.",app_store,,5,"experience, mixed, app",brand sentiment
+2026-01-27T16:14:00+04:00,In the comments: getting an error message since this morning,news_comment,,2,"message, error message, error",service/incident
+2026-01-27T16:24:00+04:00,balance isn't updating support line is busy,community_chat,,2,"message, error message, error",service/incident
+2026-01-27T18:34:00+04:00,ATM didn't dispense cash but account was debited after the update #onlineservices,social_media,6.0,3,"account, didn dispense, dispense cash",other/unclear
+2026-01-27T21:38:00+04:00,stuck on loading worked fine yesterday,community_chat,,2,"message, error message, error",service/incident
+2026-01-27T21:52:00+04:00,ATM didn't dispense cash but account was debited please fix this #customerservice support line is busy,social_media,4.0,3,"account, didn dispense, dispense cash",other/unclear
+2026-01-27T22:56:00+04:00,getting an error message is it just me?,community_chat,,2,"message, error message, error",service/incident
+2026-01-27T23:19:00+04:00,"Can't log in I tried reinstalling, no luck #customerservice",social_media,144.0,2,"message, error message, error",service/incident
+2026-01-28T00:58:00+04:00,Not happy with the recent changes. (thread),public_forum,,0,"thread, otp, update",scam/rumor
+2026-01-28T01:42:00+04:00,Service has been disappointing lately. Overall experience: okay,review_site,,7,"lately, disappointing lately, service disappointing",service/incident
+2026-01-28T03:15:00+04:00,got a fake call asking for my OTP Please stay alert. after the update,social_media,3.0,0,"thread, otp, update",scam/rumor
+2026-01-28T03:39:00+04:00,Fees feel confusing.,community_chat,,6,"fees, increased overnight, posted fees",brand sentiment
+2026-01-28T05:18:00+04:00,email saying 'verify your account' feels fake Always verify via official channels. Overall experience: okay,review_site,,3,"account, didn dispense, dispense cash",other/unclear
+2026-01-28T05:27:00+04:00,card got declined is it just me? (thread),public_forum,,4,"got, declined, card",service/incident
+2026-01-28T06:52:00+04:00,In the comments: Good products but the app reliability needs work.,news_comment,,5,"experience, mixed, app",brand sentiment
+2026-01-28T06:57:00+04:00,"getting an error message support line is busy 😕 I tried reinstalling, no luck",social_media,19.0,2,"message, error message, error",service/incident
+2026-01-28T09:07:00+04:00,"card got declined I tried reinstalling, no luck (thread)",public_forum,,4,"got, declined, card",service/incident
+2026-01-28T09:47:00+04:00,Fees feel confusing.,community_chat,,6,"fees, increased overnight, posted fees",brand sentiment
+2026-01-28T12:04:00+04:00,OTP not arriving after the update (thread),public_forum,,0,"thread, otp, update",scam/rumor
+2026-01-28T14:33:00+04:00,Not happy with the recent changes. (thread),public_forum,,0,"thread, otp, update",scam/rumor
+2026-01-28T15:21:00+04:00,OTP not arriving support line is busy — Hope it's not true.,social_media,3.0,0,"thread, otp, update",scam/rumor
+2026-01-28T15:56:00+04:00,balance isn't updating again today (thread),public_forum,,0,"thread, otp, update",scam/rumor
+2026-01-28T16:32:00+04:00,1★ Good products but the app reliability needs work.,app_store,,5,"experience, mixed, app",brand sentiment
+2026-01-28T17:32:00+04:00,Can't log in after the update (thread),public_forum,,0,"thread, otp, update",scam/rumor
+2026-01-28T17:41:00+04:00,payments failing after the update #banking since this morning,social_media,5.0,0,"thread, otp, update",scam/rumor
+2026-01-28T17:56:00+04:00,In the comments: Shoutout to the branch staff today 🙌,news_comment,,5,"experience, mixed, app",brand sentiment
+2026-01-28T18:00:00+04:00,OTP not arriving anyone else?,community_chat,,0,"thread, otp, update",scam/rumor
+2026-01-28T18:45:00+04:00,3★ got a fake call asking for my OTP This is happening a lot lately.,app_store,,0,"thread, otp, update",scam/rumor
+2026-01-28T19:24:00+04:00,Fees feel confusing. (thread),public_forum,,6,"fees, increased overnight, posted fees",brand sentiment
+2026-01-28T20:19:00+04:00,people saying accounts are being frozen. No official source though. is it just me?,social_media,5.0,2,"message, error message, error",service/incident
+2026-01-28T20:49:00+04:00,1★ Good products but the app reliability needs work.,app_store,,5,"experience, mixed, app",brand sentiment
+2026-01-28T22:13:00+04:00,saw a phishing message about 'account locked' Don't share OTPs.,community_chat,,2,"message, error message, error",service/incident
+2026-01-28T22:23:00+04:00,3★ balance isn't updating is it just me?,app_store,,2,"message, error message, error",service/incident
+2026-01-29T00:14:00+04:00,received an SMS with a suspicious link Don't share OTPs. #onlineservices Sounds unverified.,social_media,2.0,4,"got, declined, card",service/incident
+2026-01-29T02:56:00+04:00,someone pretending to be bank support in WhatsApp Please stay alert. — support line is busy,social_media,9.0,2,"message, error message, error",service/incident
+2026-01-29T04:43:00+04:00,"It works most days, but outages are too frequent. — Always verify via official channels.",social_media,12.0,2,"message, error message, error",service/incident
+2026-01-29T04:52:00+04:00,Fees feel confusing.,community_chat,,6,"fees, increased overnight, posted fees",brand sentiment
+2026-01-29T05:30:00+04:00,4★ saw a phishing message about 'account locked' Sharing so others don't fall for it.,app_store,,2,"message, error message, error",service/incident
+2026-01-29T06:02:00+04:00,someone pretending to be bank support in WhatsApp This is happening a lot lately. (thread),public_forum,,7,"lately, disappointing lately, service disappointing",service/incident
+2026-01-29T06:32:00+04:00,1★ card got declined again today,app_store,,4,"got, declined, card",service/incident
+2026-01-29T08:55:00+04:00,ATM didn't dispense cash but account was debited for the last hour #onlineservices,social_media,10.0,3,"account, didn dispense, dispense cash",other/unclear
+2026-01-29T10:33:00+04:00,"Mixed experience: branch was great, app was not. 🤦 Report it if you get it.",social_media,1.0,5,"experience, mixed, app",brand sentiment
+2026-01-29T10:45:00+04:00,"Can't log in I tried reinstalling, no luck #app",social_media,23.0,2,"message, error message, error",service/incident
+2026-01-29T11:10:00+04:00,ATM didn't dispense cash but account was debited support line is busy (thread),public_forum,,3,"account, didn dispense, dispense cash",other/unclear
+2026-01-29T12:31:00+04:00,In the comments: getting an error message this is getting frustrating,news_comment,,2,"message, error message, error",service/incident
+2026-01-29T14:41:00+04:00,online banking is super slow support line is busy,community_chat,,1,"online, super slow, super",service/incident
+2026-01-29T14:53:00+04:00,getting an error message worked fine yesterday. Please stay alert.,social_media,5.0,2,"message, error message, error",service/incident
+2026-01-29T15:05:00+04:00,OTP not arriving this is getting frustrating Overall experience: mixed,review_site,,5,"experience, mixed, app",brand sentiment
+2026-01-29T16:30:00+04:00,1★ a 'loan offer' message that looks shady This is happening a lot lately.,app_store,,7,"lately, disappointing lately, service disappointing",service/incident
+2026-01-29T16:38:00+04:00,email saying 'verify your account' feels fake Sharing so others don't fall for it.,community_chat,,3,"account, didn dispense, dispense cash",other/unclear
+2026-01-29T17:09:00+04:00,OTP not arriving please fix this,community_chat,,0,"thread, otp, update",scam/rumor
+2026-01-29T17:36:00+04:00,"saw a phishing message about 'account locked' Please stay alert. #onlineservices I tried reinstalling, no luck",social_media,13.0,2,"message, error message, error",service/incident
+2026-01-29T17:59:00+04:00,"In the comments: Love the rewards, hate the downtime.",news_comment,,2,"message, error message, error",service/incident
+2026-01-29T18:27:00+04:00,"Mixed experience: branch was great, app was not. (thread)",public_forum,,5,"experience, mixed, app",brand sentiment
+2026-01-29T18:35:00+04:00,The new rewards are nice. since this morning,social_media,5.0,2,"message, error message, error",service/incident
+2026-01-29T18:44:00+04:00,seeing unverified claims about policy changes. Can anyone confirm?,community_chat,,2,"message, error message, error",service/incident
+2026-01-29T18:46:00+04:00,In the comments: someone posted that fees increased overnight. Hope it's not true.,news_comment,,6,"fees, increased overnight, posted fees",brand sentiment
+2026-01-29T21:37:00+04:00,In the comments: OTP not arriving again today,news_comment,,0,"thread, otp, update",scam/rumor
+2026-01-29T22:05:00+04:00,online banking is super slow worked fine yesterday Overall experience: good,review_site,,1,"online, super slow, super",service/incident
+2026-01-29T22:27:00+04:00,Why is it always down when I need it? (thread),public_forum,,0,"thread, otp, update",scam/rumor
+2026-01-29T22:32:00+04:00,In the comments: someone posted that fees increased overnight. Can anyone confirm?,news_comment,,6,"fees, increased overnight, posted fees",brand sentiment
+2026-01-29T23:33:00+04:00,Support is taking forever to respond. for the last hour,social_media,10.0,2,"message, error message, error",service/incident
+2026-01-29T23:57:00+04:00,received an SMS with a suspicious link Report it if you get it.. Sharing so others don't fall for it.,social_media,13.0,4,"got, declined, card",service/incident
+2026-01-30T00:20:00+04:00,5★ Service has been disappointing lately.,app_store,,7,"lately, disappointing lately, service disappointing",service/incident
+2026-01-30T00:41:00+04:00,"online banking is super slow I tried reinstalling, no luck (thread)",public_forum,,1,"online, super slow, super",service/incident
+2026-01-30T00:48:00+04:00,ATM didn't dispense cash but account was debited please fix this,community_chat,,3,"account, didn dispense, dispense cash",other/unclear
+2026-01-30T03:21:00+04:00,"Mixed experience: branch was great, app was not. Overall experience: good",review_site,,5,"experience, mixed, app",brand sentiment
+2026-01-30T04:11:00+04:00,Service has been disappointing lately. (thread),public_forum,,7,"lately, disappointing lately, service disappointing",service/incident
+2026-01-30T04:20:00+04:00,Good products but the app reliability needs work. (thread),public_forum,,5,"experience, mixed, app",brand sentiment
+2026-01-30T06:36:00+04:00,In the comments: Customer support was actually helpful.,news_comment,,2,"message, error message, error",service/incident
+2026-01-30T06:53:00+04:00,This experience is exhausting. (thread),public_forum,,5,"experience, mixed, app",brand sentiment
+2026-01-30T06:57:00+04:00,someone posted that fees increased overnight. Take with a grain of salt. (thread),public_forum,,6,"fees, increased overnight, posted fees",brand sentiment
+2026-01-30T09:07:00+04:00,In the comments: email saying 'verify your account' feels fake Sharing so others don't fall for it.,news_comment,,3,"account, didn dispense, dispense cash",other/unclear
+2026-01-30T09:26:00+04:00,Good products but the app reliability needs work. (thread),public_forum,,5,"experience, mixed, app",brand sentiment
+2026-01-30T10:20:00+04:00,In the comments: payments failing worked fine yesterday,news_comment,,2,"message, error message, error",service/incident
+2026-01-30T11:21:00+04:00,app keeps crashing support line is busy No official source though.,social_media,14.0,0,"thread, otp, update",scam/rumor
+2026-01-30T11:21:00+04:00,"It works most days, but outages are too frequent. — worked fine yesterday",social_media,3.0,2,"message, error message, error",service/incident
+2026-01-30T11:40:00+04:00,3★ ATM didn't dispense cash but account was debited is it just me?,app_store,,3,"account, didn dispense, dispense cash",other/unclear
+2026-01-30T12:01:00+04:00,caller ID looked real but it was a scam This is happening a lot lately. 🤦 again today,social_media,32.0,7,"lately, disappointing lately, service disappointing",service/incident
+2026-01-30T13:16:00+04:00,2★ got a fake call asking for my OTP This is happening a lot lately.,app_store,,0,"thread, otp, update",scam/rumor
+2026-01-30T14:05:00+04:00,Support is taking forever to respond.,community_chat,,2,"message, error message, error",service/incident
+2026-01-30T14:41:00+04:00,someone posted that fees increased overnight. Can anyone confirm? #banking this is getting frustrating,social_media,12.0,6,"fees, increased overnight, posted fees",brand sentiment
+2026-01-30T14:56:00+04:00,In the comments: Customer support was actually helpful.,news_comment,,2,"message, error message, error",service/incident
+2026-01-30T15:28:00+04:00,4★ someone posted that fees increased overnight. Take with a grain of salt.,app_store,,6,"fees, increased overnight, posted fees",brand sentiment
+2026-01-30T16:02:00+04:00,card got declined worked fine yesterday (thread),public_forum,,4,"got, declined, card",service/incident
+2026-01-30T17:35:00+04:00,stuck on loading support line is busy,community_chat,,2,"message, error message, error",service/incident
+2026-01-30T18:12:00+04:00,card got declined this is getting frustrating (thread),public_forum,,4,"got, declined, card",service/incident
+2026-01-30T18:25:00+04:00,stuck on loading is it just me?,community_chat,,4,"got, declined, card",service/incident
+2026-01-30T19:14:00+04:00,balance isn't updating for the last hour,community_chat,,2,"message, error message, error",service/incident
+2026-01-30T21:52:00+04:00,2★ Service has been disappointing lately.,app_store,,7,"lately, disappointing lately, service disappointing",service/incident
+2026-01-30T22:08:00+04:00,"Mixed experience: branch was great, app was not.",community_chat,,5,"experience, mixed, app",brand sentiment
+2026-01-31T00:53:00+04:00,Shoutout to the branch staff today 🙌,community_chat,,5,"experience, mixed, app",brand sentiment
+2026-01-31T01:32:00+04:00,Service has been disappointing lately.,community_chat,,7,"lately, disappointing lately, service disappointing",service/incident
+2026-01-31T01:41:00+04:00,Customer support was actually helpful. Hope it's not true.,social_media,3.0,2,"message, error message, error",service/incident
+2026-01-31T02:41:00+04:00,online banking is super slow support line is busy,community_chat,,1,"online, super slow, super",service/incident
+2026-01-31T02:57:00+04:00,caller ID looked real but it was a scam This is happening a lot lately.,community_chat,,7,"lately, disappointing lately, service disappointing",service/incident
+2026-01-31T03:03:00+04:00,2★ someone pretending to be bank support in WhatsApp Report it if you get it.,app_store,,2,"message, error message, error",service/incident
+2026-01-31T05:49:00+04:00,transfer isn't going through please fix this — please fix this,social_media,7.0,2,"message, error message, error",service/incident
+2026-01-31T05:51:00+04:00,online banking is super slow after the update 🙌 again today,social_media,7.0,1,"online, super slow, super",service/incident
+2026-01-31T05:59:00+04:00,login keeps failing please fix this (thread),public_forum,,0,"thread, otp, update",scam/rumor
+2026-01-31T06:01:00+04:00,"Can't log in right now, stuck on loading — please fix this (thread)",public_forum,,4,"got, declined, card",service/incident
+2026-01-31T06:03:00+04:00,"online banking is super slow, timing out — right now — Take with a grain of salt.",social_media,6.0,1,"online, super slow, super",service/incident
+2026-01-31T06:04:00+04:00,app keeps crashing after the update — again today (thread),public_forum,,0,"thread, otp, update",scam/rumor
+2026-01-31T06:12:00+04:00,getting an error message when trying to transfer — again today (thread),public_forum,,2,"message, error message, error",service/incident
+2026-01-31T06:14:00+04:00,"Can't log in right now, stuck on loading — anyone else? (thread)",public_forum,,4,"got, declined, card",service/incident
+2026-01-31T06:18:00+04:00,getting an error message when trying to transfer — please fix this #banking,social_media,5.0,2,"message, error message, error",service/incident
+2026-01-31T06:52:00+04:00,"Can't log in right now, stuck on loading — again today (thread)",public_forum,,4,"got, declined, card",service/incident
+2026-01-31T06:54:00+04:00,getting an error message when trying to transfer — again today 🙌 Report it if you get it.,social_media,3.0,2,"message, error message, error",service/incident
+2026-01-31T06:55:00+04:00,getting an error message when trying to transfer — please fix this (thread),public_forum,,2,"message, error message, error",service/incident
+2026-01-31T07:00:00+04:00,card got declined at the worst time 😩 — is it just me?. Take with a grain of salt.,social_media,15.0,4,"got, declined, card",service/incident
+2026-01-31T07:14:00+04:00,getting an error message when trying to transfer — please fix this — Always verify via official channels.,social_media,9.0,2,"message, error message, error",service/incident
+2026-01-31T07:15:00+04:00,getting an error message when trying to transfer — right now,community_chat,,2,"message, error message, error",service/incident
+2026-01-31T07:21:00+04:00,getting an error message when trying to transfer — anyone else? #customerservice Don't share OTPs.,social_media,1.0,2,"message, error message, error",service/incident
+2026-01-31T07:25:00+04:00,"online banking is super slow, timing out — right now (thread)",public_forum,,1,"online, super slow, super",service/incident
+2026-01-31T07:31:00+04:00,getting an error message when trying to transfer — please fix this,community_chat,,2,"message, error message, error",service/incident
+2026-01-31T07:38:00+04:00,card got declined at the worst time 😩 — again today — for the last hour,social_media,21.0,4,"got, declined, card",service/incident
+2026-01-31T07:38:00+04:00,card got declined at the worst time 😩 — please fix this Report it if you get it.,social_media,6.0,4,"got, declined, card",service/incident
+2026-01-31T07:42:00+04:00,"Can't log in right now, stuck on loading — again today 🚨 I tried reinstalling, no luck",social_media,17.0,4,"got, declined, card",service/incident
+2026-01-31T07:56:00+04:00,"1★ Mixed experience: branch was great, app was not.",app_store,,5,"experience, mixed, app",brand sentiment
+2026-01-31T08:03:00+04:00,card got declined at the worst time 😩 — please fix this,community_chat,,4,"got, declined, card",service/incident
+2026-01-31T08:22:00+04:00,"Can't log in right now, stuck on loading — is it just me? #banking support line is busy",social_media,15.0,4,"got, declined, card",service/incident
+2026-01-31T08:33:00+04:00,app keeps crashing after the update — anyone else? (thread),public_forum,,0,"thread, otp, update",scam/rumor
+2026-01-31T08:34:00+04:00,The new rewards are nice.. Always verify via official channels.,social_media,10.0,2,"message, error message, error",service/incident
+2026-01-31T09:05:00+04:00,"online banking is super slow, timing out — is it just me? #onlineservices Sharing so others don't fall for it.",social_media,7.0,1,"online, super slow, super",service/incident
+2026-01-31T09:15:00+04:00,getting an error message when trying to transfer — please fix this 🚨 Don't share OTPs.,social_media,23.0,2,"message, error message, error",service/incident
+2026-01-31T09:18:00+04:00,"Can't log in right now, stuck on loading — please fix this (thread)",public_forum,,4,"got, declined, card",service/incident
+2026-01-31T09:22:00+04:00,card got declined at the worst time 😩 — anyone else? — Can anyone confirm?,social_media,21.0,4,"got, declined, card",service/incident
+2026-01-31T09:34:00+04:00,"Can't log in right now, stuck on loading — anyone else? Hope it's not true.",social_media,24.0,4,"got, declined, card",service/incident
+2026-01-31T09:40:00+04:00,card got declined at the worst time 😩 — is it just me? #uae,social_media,10.0,4,"got, declined, card",service/incident
+2026-01-31T09:46:00+04:00,card got declined at the worst time 😩 — right now (thread),public_forum,,4,"got, declined, card",service/incident
+2026-01-31T09:49:00+04:00,"online banking is super slow, timing out — right now #onlineservices Sounds unverified.",social_media,15.0,1,"online, super slow, super",service/incident
+2026-01-31T09:53:00+04:00,"online banking is super slow, timing out — anyone else?",community_chat,,1,"online, super slow, super",service/incident
+2026-01-31T09:56:00+04:00,Had a smooth experience opening an account. (thread),public_forum,,3,"account, didn dispense, dispense cash",other/unclear
+2026-01-31T10:27:00+04:00,app keeps crashing after the update — please fix this,community_chat,,0,"thread, otp, update",scam/rumor
+2026-01-31T10:33:00+04:00,"online banking is super slow, timing out — please fix this (thread)",public_forum,,1,"online, super slow, super",service/incident
+2026-01-31T10:36:00+04:00,"online banking is super slow, timing out — please fix this",community_chat,,1,"online, super slow, super",service/incident
+2026-01-31T10:41:00+04:00,"Can't log in right now, stuck on loading — is it just me? This is happening a lot lately.",social_media,18.0,4,"got, declined, card",service/incident
+2026-01-31T10:44:00+04:00,app keeps crashing after the update — is it just me? #customerservice,social_media,9.0,0,"thread, otp, update",scam/rumor
+2026-01-31T11:09:00+04:00,card got declined at the worst time 😩 — right now (thread),public_forum,,4,"got, declined, card",service/incident
+2026-01-31T11:34:00+04:00,getting an error message when trying to transfer — is it just me? worked fine yesterday,social_media,3.0,2,"message, error message, error",service/incident
+2026-01-31T11:37:00+04:00,"Can't log in right now, stuck on loading — again today Sounds unverified.",social_media,12.0,4,"got, declined, card",service/incident
+2026-01-31T11:49:00+04:00,"Can't log in right now, stuck on loading — please fix this #uae",social_media,18.0,4,"got, declined, card",service/incident
+2026-01-31T11:53:00+04:00,"online banking is super slow, timing out — anyone else? 🙏 support line is busy",social_media,3.0,1,"online, super slow, super",service/incident
+2026-01-31T11:57:00+04:00,In the comments: Support is taking forever to respond.,news_comment,,2,"message, error message, error",service/incident
