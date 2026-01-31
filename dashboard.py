@@ -1092,7 +1092,7 @@ def render_executive_briefing():
     
     **SITUATION:**  
     Detected sudden 245% increase in complaints about mobile banking login failures starting at 11:30 AM. 
-    47 customer mentions within 3 hours.
+    47 customer mentions within 3 hours
     
     **POTENTIAL IMPACT:**
     - Immediate: Customer access disruption
