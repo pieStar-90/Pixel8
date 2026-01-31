@@ -578,45 +578,162 @@ def render_trend_chart():
     
     st.info("📈 **Trend Analysis:** Service-related signals showing significant increase on Jan 30. Sentiment remains elevated compared to baseline.")
 
+def render_signal_distribution():
+    """Render signal distribution bar charts - Mashreq style"""
+    st.markdown("<h2>📊 Signal Distribution Analysis</h2>", unsafe_allow_html=True)
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        # Priority Distribution
+        priority_data = {
+            'Priority': ['High', 'Medium', 'Low'],
+            'Count': [3, 5, 4]
+        }
+        
+        fig1 = go.Figure(data=[
+            go.Bar(
+                x=priority_data['Priority'],
+                y=priority_data['Count'],
+                marker=dict(
+                    color=['#DC2626', '#F59E0B', '#10B981'],
+                    line=dict(color='#ffffff', width=2)
+                ),
+                text=priority_data['Count'],
+                textposition='auto',
+                textfont=dict(size=14, color='white', family='Roboto', weight='bold')
+            )
+        ])
+        
+        fig1.update_layout(
+            title=dict(
+                text='Signals by Priority Level',
+                font=dict(size=16, color='#00539F', family='Roboto', weight='bold')
+            ),
+            plot_bgcolor='#F8FAFC',
+            paper_bgcolor='white',
+            font=dict(family='Roboto', size=12, color='#1E293B'),
+            margin=dict(l=20, r=20, t=60, b=40),
+            height=350,
+            xaxis=dict(
+                showgrid=False,
+                title=dict(text='Priority Level', font=dict(size=12, color='#64748B'))
+            ),
+            yaxis=dict(
+                showgrid=True,
+                gridwidth=1,
+                gridcolor='#E2E8F0',
+                title=dict(text='Number of Signals', font=dict(size=12, color='#64748B'))
+            )
+        )
+        
+        st.plotly_chart(fig1, use_container_width=True)
+    
+    with col2:
+        # Category Distribution
+        category_data = {
+            'Category': ['Service', 'Sentiment', 'Fraud', 'Misinformation'],
+            'Count': [5, 4, 2, 1]
+        }
+        
+        fig2 = go.Figure(data=[
+            go.Bar(
+                x=category_data['Category'],
+                y=category_data['Count'],
+                marker=dict(
+                    color=['#00539F', '#0066CC', '#00A3E0', '#003366'],
+                    line=dict(color='#ffffff', width=2)
+                ),
+                text=category_data['Count'],
+                textposition='auto',
+                textfont=dict(size=14, color='white', family='Roboto', weight='bold')
+            )
+        ])
+        
+        fig2.update_layout(
+            title=dict(
+                text='Signals by Category',
+                font=dict(size=16, color='#00539F', family='Roboto', weight='bold')
+            ),
+            plot_bgcolor='#F8FAFC',
+            paper_bgcolor='white',
+            font=dict(family='Roboto', size=12, color='#1E293B'),
+            margin=dict(l=20, r=20, t=60, b=40),
+            height=350,
+            xaxis=dict(
+                showgrid=False,
+                title=dict(text='Category', font=dict(size=12, color='#64748B'))
+            ),
+            yaxis=dict(
+                showgrid=True,
+                gridwidth=1,
+                gridcolor='#E2E8F0',
+                title=dict(text='Number of Signals', font=dict(size=12, color='#64748B'))
+            )
+        )
+        
+        st.plotly_chart(fig2, use_container_width=True)
+
+def render_horizontal_bar_chart():
+    """Render horizontal bar chart for top drivers - Mashreq style"""
+    st.markdown("<h2>🔍 Top Signal Drivers</h2>", unsafe_allow_html=True)
+    
+    drivers_data = {
+        'Driver': ['Login screen freezing', 'Long wait times', 'Cannot access account', 
+                   'Unhelpful responses', 'App crashing on startup', 'No follow-up'],
+        'Mentions': [31, 34, 18, 28, 12, 27]
+    }
+    
+    fig = go.Figure(data=[
+        go.Bar(
+            y=drivers_data['Driver'],
+            x=drivers_data['Mentions'],
+            orientation='h',
+            marker=dict(
+                color=drivers_data['Mentions'],
+                colorscale=[
+                    [0, '#D1FAE5'],
+                    [0.5, '#00A3E0'],
+                    [1, '#00539F']
+                ],
+                line=dict(color='#ffffff', width=2)
+            ),
+            text=drivers_data['Mentions'],
+            textposition='auto',
+            textfont=dict(size=13, color='white', family='Roboto', weight='bold')
+        )
+    ])
+    
+    fig.update_layout(
+        plot_bgcolor='#F8FAFC',
+        paper_bgcolor='white',
+        font=dict(family='Roboto', size=12, color='#1E293B'),
+        margin=dict(l=20, r=20, t=20, b=40),
+        height=400,
+        xaxis=dict(
+            showgrid=True,
+            gridwidth=1,
+            gridcolor='#E2E8F0',
+            title=dict(text='Number of Mentions', font=dict(size=12, color='#64748B'))
+        ),
+        yaxis=dict(
+            showgrid=False,
+            title=None
+        ),
+        showlegend=False
+    )
+    
+    st.plotly_chart(fig, use_container_width=True)
+    
 def render_signal_card(signal: Signal):
-    """Render individual signal card"""
-    priority_class = f"signal-card-{signal.priority}"
+    """Render individual signal card - SIMPLE TEST VERSION"""
     priority_emoji = get_priority_emoji(signal.priority)
     time_ago = format_time_ago(signal.created_at)
     
-    st.markdown(f"""
-    <div class='signal-card {priority_class}'>
-        <div style='display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;'>
-            <div style='display: flex; align-items: center; gap: 0.75rem;'>
-                <span style='font-size: 1.5rem;'>{priority_emoji}</span>
-                <span class='badge badge-{signal.priority}'>{signal.priority.upper()} PRIORITY</span>
-            </div>
-            <span style='color: #9ca3af; font-size: 0.875rem;'>{time_ago}</span>
-        </div>
-        
-        <h3 style='margin-bottom: 1rem; color: #1f2937;'>{signal.title}</h3>
-        
-        <div style='display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1rem;'>
-            <div>
-                <span style='color: #6b7280; font-size: 0.875rem;'>Severity:</span>
-                <div style='font-weight: 700; color: #0A4D68; font-size: 1.1rem;'>{signal.severity}/10</div>
-            </div>
-            <div>
-                <span style='color: #6b7280; font-size: 0.875rem;'>Confidence:</span>
-                <div style='font-weight: 700; color: #10B981; font-size: 1.1rem;'>{signal.confidence}%</div>
-            </div>
-            <div>
-                <span style='color: #6b7280; font-size: 0.875rem;'>Status:</span>
-                <div style='font-weight: 600; color: #374151; font-size: 1rem; text-transform: capitalize;'>{signal.status.replace('_', ' ')}</div>
-            </div>
-        </div>
-        
-        <div style='display: flex; gap: 1rem; color: #6b7280; font-size: 0.875rem; margin-bottom: 1rem;'>
-            <div>📈 Volume: <span style='font-weight: 600; color: #EF4444;'>+{signal.volume_change}%</span></div>
-            <div>💬 <span style='font-weight: 600;'>{signal.mention_count}</span> mentions</div>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+    st.write(f"{priority_emoji} **{signal.title}**")
+    st.write(f"Priority: {signal.priority.upper()} | Time: {time_ago}")
+    st.write(f"Severity: {signal.severity}/10 | Confidence: {signal.confidence}%")
+    st.write(f"Volume: +{signal.volume_change}% | Mentions: {signal.mention_count}")
     
     col1, col2 = st.columns(2)
     with col1:
@@ -628,6 +745,8 @@ def render_signal_card(signal: Signal):
         if st.button(f"Assign to Team", key=f"assign_{signal.id}"):
             st.session_state.page = "review"
             st.rerun()
+    
+    st.markdown("---")
 
 def render_dashboard():
     """Render main dashboard page"""
@@ -641,6 +760,13 @@ def render_dashboard():
     # Trend Chart
     render_trend_chart()
     st.markdown("<br>", unsafe_allow_html=True)
+    
+    # Bar Charts 
+    render_signal_distribution()
+    st.markdown("<br><br>", unsafe_allow_html=True)
+    
+    render_horizontal_bar_chart()
+    st.markdown("<br><br>", unsafe_allow_html=True)
     
     # Signal Cards
     st.markdown("### 🔍 Top Priority Signals")
@@ -658,7 +784,7 @@ def render_dashboard():
     
     - 🔵 Operations Team assigned "App Login Issues" - *15m ago*
     - 🔵 Communications reviewed "Brand Sentiment" - *1h ago*
-    - 🟢 Signal "Payment Delays" marked Resolved - *3h ago*
+    - 🟢 Signal "Payment Delays" marked Resolved - - *3h ago*
     """)
 
 def render_signal_detail():
@@ -715,32 +841,31 @@ def render_signal_detail():
     </div>
     """, unsafe_allow_html=True)
     
-    # Why This Matters
-    st.markdown(f"""
-    ### 💡 Why This Matters
+    # Why This Matters - USE ST.WRITE INSTEAD
+    st.markdown("### 💡 Why This Matters")
+    st.markdown(signal.description, unsafe_allow_html=True)
+
     
-    {signal.description}
+    st.markdown("**POTENTIAL IMPACT:**")
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        impact_class = get_impact_color(signal.impact["customer"])
+        st.markdown(f"**Customer Experience:** <span class='{impact_class}'>{signal.impact['customer'].upper()}</span>", unsafe_allow_html=True)
+    with col2:
+        impact_class = get_impact_color(signal.impact["brand"])
+        st.markdown(f"**Brand Reputation:** <span class='{impact_class}'>{signal.impact['brand'].upper()}</span>", unsafe_allow_html=True)
+    with col3:
+        impact_class = get_impact_color(signal.impact["operational"])
+        st.markdown(f"**Operational Risk:** <span class='{impact_class}'>{signal.impact['operational'].upper()}</span>", unsafe_allow_html=True)
     
-    **POTENTIAL IMPACT:**
-    
-    - **Customer Experience:** <span class='{get_impact_color(signal.impact["customer"])}'>{signal.impact['customer'].upper()}</span>
-    - **Brand Reputation:** <span class='{get_impact_color(signal.impact["brand"])}'>{signal.impact['brand'].upper()}</span>
-    - **Operational Risk:** <span class='{get_impact_color(signal.impact["operational"])}'>{signal.impact['operational'].upper()}</span>
-    
-    **RECOMMENDED ACTION:**
-    Route to Operations & IT Teams for immediate review and investigation.
-    """, unsafe_allow_html=True)
+    st.info("**RECOMMENDED ACTION:** Route to Operations & IT Teams for immediate review and investigation.")
     
     # Signal Analysis
     st.markdown("<br>", unsafe_allow_html=True)
-    st.markdown("""
-    ### 📈 Signal Analysis
+    st.markdown("### 📈 Signal Analysis")
     
-    **DETECTION METHOD:**  
-    Volume spike detection (last 3 hours vs. baseline)
-    
-    **KEY METRICS:**
-    """)
+    st.write("**DETECTION METHOD:** Volume spike detection (last 3 hours vs. baseline)")
+    st.write("**KEY METRICS:**")
     
     col1, col2 = st.columns(2)
     with col1:
