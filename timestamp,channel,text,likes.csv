@@ -1,0 +1,89 @@
+timestamp,channel,text,likes
+2026-01-24T07:40,social_post,"Really like how fast the transfers are now!",112
+2026-01-24T09:15,comment,"Support chat was helpful today, quick response.",68
+2026-01-24T11:50,forum_discussion,"ATM worked perfectly, no fees surprise.",89
+2026-01-24T14:20,social_post,"App update is nice, cleaner interface.",134
+2026-01-24T17:10,news_headline,"Bank announces minor app improvements.",-
+2026-01-24T19:55,comment,"Card payment smooth at the store.",45
+2026-01-25T06:30,social_post,"Good morning, just checked balance - all good!",98
+2026-01-25T08:45,forum_discussion,"Online bill pay is super convenient.",76
+2026-01-25T10:20,comment,"Took 10 min on hold but issue resolved.",61
+2026-01-25T13:05,social_post,"Love the budgeting tool in the app.",145
+2026-01-25T15:40,news_headline,"Customers share mixed views on recent support changes.",-
+2026-01-25T18:15,comment,"Wait time was long again today.",82
+2026-01-26T07:10,social_post,"No problems with mobile deposits this week.",119
+2026-01-26T09:35,forum_discussion,"Customer service feels slower lately.",94
+2026-01-26T12:00,comment,"Rep was polite but didn't solve my problem fully.",57
+2026-01-26T14:25,social_post,"App keeps logging me out randomly now.",168
+2026-01-26T16:50,news_headline,"Increasing complaints about login stability.",-
+2026-01-26T19:30,forum_discussion,"Anyone else getting error messages on login?",103
+2026-01-27T06:55,social_post,"Payment went through fine yesterday.",88
+2026-01-27T09:20,comment,"Support chat disconnected twice, annoying.",71
+2026-01-27T11:45,forum_discussion,"More threads popping up about slow support.",126
+2026-01-27T14:10,social_post,"Not impressed with the hold times recently.",192
+2026-01-27T16:35,news_headline,"Public discussion grows around service delays.",-
+2026-01-27T19:00,comment,"Called support, waited 45 minutes.",79
+2026-01-28T07:25,social_post,"Website is loading okay today.",105
+2026-01-28T09:50,forum_discussion,"Scam texts pretending to be the bank are increasing.",-
+2026-01-28T12:15,comment,"Got a weird call claiming my account is locked.",64
+2026-01-28T14:40,social_post,"Beware of fake reward emails from 'the bank'.",141
+2026-01-28T17:05,news_headline,"Warnings issued about ongoing phishing attempts.",-
+2026-01-28T19:30,forum_discussion,"Another fake text about card suspension today.",92
+2026-01-29T06:45,social_post,"Everything working normally this morning.",122
+2026-01-29T09:10,comment,"Support response time seems worse this week.",83
+2026-01-29T11:35,forum_discussion,"Negative feedback on customer care rising.",138
+2026-01-29T14:00,social_post,"Really disappointed with how complaints are handled.",204
+2026-01-29T16:25,news_headline,"Sentiment appears to be shifting negatively online.",-
+2026-01-29T18:50,comment,"Long queues on phone support again.",75
+2026-01-30T00:20,forum_discussion,"Can't log in to mobile app right now??",187
+2026-01-30T01:55,social_post,"Mobile app login not working anyone else?",245
+2026-01-30T03:10,comment,"App crashing every time I try to log in.",198
+2026-01-30T04:40,social_post,"Can't log into the mobile app this morning, anyone else?",245
+2026-01-30T05:25,forum_discussion,"System seems completely down for me.",176
+2026-01-30T06:15,social_post,"Mobile app login not working anyone else?",245
+2026-01-30T06:50,comment,"Payment won't go through, stuck on processing.",211
+2026-01-30T07:20,social_post,"Can't log into the mobile app this morning, anyone else?",245
+2026-01-30T07:45,forum_discussion,"Outage? Can't access my account at all.",203
+2026-01-30T08:10,social_post,"App down again, this is ridiculous.",278
+2026-01-30T08:30,comment,"Login issues since early morning, fix it!",234
+2026-01-30T08:55,social_post,"Mobile banking app crashing on login attempts.",289
+2026-01-30T09:15,news_headline,"Reports of widespread bank app issues.",-
+2026-01-30T09:40,social_post,"Can't make payments due to system problems.",312
+2026-01-30T10:05,forum_discussion,"Login issues persisting, need updates from the bank.",195
+2026-01-30T10:25,comment,"Outage affecting transfers, when will it be fixed?",267
+2026-01-30T10:50,social_post,"System outage reported by many users.",301
+2026-01-30T10:50,social_post,"System outage reported by many users.",301
+2026-01-30T10:50,social_post,"System outage reported by many users.",301
+2026-01-30T11:15,forum_discussion,"Can't access online banking, outage confirmed.",184
+2026-01-30T11:35,social_post,"Mobile app login failing repeatedly.",318
+2026-01-30T11:35,social_post,"Mobile app login failing repeatedly.",318
+2026-01-30T12:00,comment,"Payments stuck due to technical issues.",256
+2026-01-30T12:20,social_post,"App down again, this is inconvenient.",274
+2026-01-30T12:20,social_post,"App down again, this is inconvenient.",274
+2026-01-30T12:45,forum_discussion,"Anyone getting error 503 on the app?",209
+2026-01-30T13:05,social_post,"Can't log in, keeps saying maintenance.",285
+2026-01-30T13:05,social_post,"Can't log in, keeps saying maintenance.",285
+2026-01-30T13:30,comment,"This outage is messing up my whole day.",242
+2026-01-30T13:50,social_post,"System outage reported by many users.",301
+2026-01-30T13:50,social_post,"System outage reported by many users.",301
+2026-01-30T14:15,news_headline,"Bank facing system-wide disruptions.",-
+2026-01-30T14:35,forum_discussion,"Still down? No official statement yet?",198
+2026-01-30T14:55,social_post,"Outage making it hard to manage finances.",293
+2026-01-30T15:15,comment,"App issues spiking today, hope for quick resolution.",261
+2026-01-30T15:35,social_post,"Mobile banking completely unusable right now.",327
+2026-01-30T15:35,social_post,"Mobile banking completely unusable right now.",327
+2026-01-30T16:00,forum_discussion,"Error on every login attempt since 7am.",215
+2026-01-30T16:20,comment,"Can't log in, system seems unstable.",279
+2026-01-30T16:40,social_post,"Delays in app functionality are annoying.",258
+2026-01-30T17:00,news_headline,"Ongoing technical problems reported across platforms.",-
+2026-01-30T17:20,social_post,"Outage alert: mobile banking down.",314
+2026-01-30T17:20,social_post,"Outage alert: mobile banking down.",314
+2026-01-30T17:45,comment,"Poor handling of this outage so far.",89
+2026-01-30T18:05,forum_discussion,"Fake outage? Or real? Too many same messages.",167
+2026-01-30T18:25,social_post,"Still can't access my account - anyone fixed it?",302
+2026-01-30T18:45,comment,"Support line is jammed because of this.",94
+2026-01-30T19:05,social_post,"Hoping the bank fixes the app soon.",186
+2026-01-30T19:25,forum_discussion,"This is the worst outage in months.",223
+2026-01-30T19:45,social_post,"Login still failing at 7:30pm...",269
+2026-01-30T20:05,comment,"Frustrated with no communication from bank.",102
+2026-01-30T20:25,social_post,"Mobile app issues continue - unacceptable.",295
