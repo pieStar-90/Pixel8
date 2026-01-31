@@ -25,18 +25,21 @@ def map_cluster_to_scenario(cluster_keywords_or_label):
 
     service_terms = [
         "outage", "down", "login", "log in", "access", "online banking", "slow", "error",
-        "failed", "declined", "payment", "card payment", "atm", "withdrawal", "app", "glitch"
+        "failed", "declined", "payment", "card payment", "atm", "withdrawal", "app", "glitch",
+        "crash", "timeout", "timing out", "stuck", "loading"
     ]
     scam_terms = [
         "otp", "phishing", "scam", "fraud", "fake", "fake call", "fake support", "sms",
-        "skimming", "impersonat", "spoof"
+        "skimming", "impersonat", "spoof", "whatsapp", "link"
     ]
     sentiment_terms = [
         "good", "great", "helpful", "smooth", "positive", "bad", "poor", "terrible",
-        "customer service", "fees", "charges", "benefits", "rewards", "experience"
+        "customer service", "fees", "charges", "benefits", "rewards", "experience",
+        "love", "hate", "appreciate"
     ]
     rumor_terms = [
-        "rumor", "unverified", "claim", "unclear", "breach", "data breach", "frozen", "freeze"
+        "rumor", "unverified", "claim", "unclear", "breach", "data breach", "frozen", "freeze",
+        "leak", "shutting down"
     ]
 
     def score(terms):
@@ -49,14 +52,61 @@ def map_cluster_to_scenario(cluster_keywords_or_label):
 
     if scam_score >= 1 and scam_score >= service_score:
         return "scam/rumor"
-
     if service_score >= 1 and service_score >= sentiment_score:
         return "service/incident"
-
     if sentiment_score >= 1 or (rumor_score >= 1 and service_score == 0 and scam_score == 0):
         return "brand sentiment"
-
     return "other/unclear"
+
+
+def map_cluster_to_topic_group(cluster_keywords_or_label):
+    """
+    Collapse clusters into exactly 4 groups:
+      - general_feedback
+      - brand_sentiment
+      - service_outage
+      - scam_rumour
+
+    Explainable: keyword scoring on cluster top TF-IDF terms.
+    """
+    if isinstance(cluster_keywords_or_label, (list, tuple)):
+        text = " ".join(cluster_keywords_or_label).lower()
+    else:
+        text = str(cluster_keywords_or_label).lower()
+
+    service_outage_terms = [
+        "outage", "down", "login", "log in", "slow", "error", "failed", "declined",
+        "payment", "atm", "withdrawal", "transfer", "timeout", "timing out", "crash",
+        "stuck", "loading", "glitch", "unusable", "online banking", "app"
+    ]
+
+    scam_rumour_terms = [
+        "otp", "phishing", "scam", "fraud", "fake", "spoof", "impersonat", "skimming",
+        "sms", "whatsapp", "suspicious", "link",
+        "rumor", "unverified", "claim", "breach", "data breach", "leak", "freeze", "frozen"
+    ]
+
+    brand_sentiment_terms = [
+        "good", "great", "helpful", "smooth", "terrible", "poor", "bad",
+        "fees", "charges", "rewards", "benefits", "experience", "customer service",
+        "love", "hate", "appreciate", "disappointing", "happy", "impressed"
+    ]
+
+    def score(terms):
+        return sum(1 for t in terms if t in text)
+
+    s_service = score(service_outage_terms)
+    s_scam = score(scam_rumour_terms)
+    s_brand = score(brand_sentiment_terms)
+
+    # Priority order: scam > outage > brand > general
+    if s_scam >= 1 and s_scam >= s_service:
+        return "scam_rumour"
+    if s_service >= 1 and s_service >= s_brand:
+        return "service_outage"
+    if s_brand >= 1:
+        return "brand_sentiment"
+    return "general_feedback"
 
 
 def compute_certainty(df: pd.DataFrame, channel_col: str = "channel", likes_col: str = "likes") -> pd.Series:
@@ -102,24 +152,21 @@ def cluster_topics(
     channel_col="channel",
     likes_col="likes",
     top_k_words=6,
-    candidate_k=(5, 6, 7, 8),
+    candidate_k=(7, 8),  # keep tight if you want stability; widen if you prefer
     save_output=True,
     sentiment_train_path="data/sentiment_train.csv"
 ):
     """
     Topic clustering (explainable) using TF-IDF + KMeans.
-    Reads: data_path(.csv) or a directory containing a CSV.
 
     Adds:
       - cluster_id
       - cluster_label
       - scenario_from_cluster
+      - topic_group (4 buckets)
       - certainty (1..10)
       - sentiment (ML)
-      - sentiment_confidence (ML prob)
-
-    Returns:
-      df, cluster_summary, cluster_keywords, cluster_labels, out_path
+      - sentiment_confidence (ML)
     """
     # Resolve file path
     if os.path.isdir(data_path):
@@ -179,17 +226,28 @@ def cluster_topics(
 
     df["cluster_label"] = df["cluster_id"].map(cluster_labels)
 
-    # Scenario mapping
+    # Scenario mapping (existing)
     df["scenario_from_cluster"] = df["cluster_id"].map(
         lambda cid: map_cluster_to_scenario(cluster_keywords[cid])
     )
 
+    # NEW: Collapse clusters into exactly 4 groups
+    df["topic_group"] = df["cluster_id"].map(
+        lambda cid: map_cluster_to_topic_group(cluster_keywords[cid])
+    )
+
+    group_id_map = {
+        "general_feedback": 0,
+        "brand_sentiment": 1,
+        "service_outage": 2,
+        "scam_rumour": 3
+    }
+    df["topic_group_id"] = df["topic_group"].map(group_id_map).fillna(0).astype(int)
+
     # Certainty score (1..10)
     df["certainty"] = compute_certainty(df, channel_col=channel_col, likes_col=likes_col)
 
-    # -----------------------
     # ML Sentiment (train -> predict)
-    # -----------------------
     if not os.path.exists(sentiment_train_path):
         raise FileNotFoundError(
             f"Sentiment training file not found: {sentiment_train_path}\n"
@@ -202,13 +260,23 @@ def cluster_topics(
     df["sentiment"] = sent_out["sentiment_ml"]
     df["sentiment_confidence"] = sent_out["sentiment_confidence"]
 
-    # Summary table
+    # Summary tables
     cluster_summary = (
         df.groupby(["cluster_id", "cluster_label"])
           .size()
           .reset_index(name="count")
           .sort_values("count", ascending=False)
     )
+
+    group_summary = (
+        df.groupby(["topic_group"])
+          .size()
+          .reset_index(name="count")
+          .sort_values("count", ascending=False)
+    )
+
+    print("\n=== 4-Group Summary ===")
+    print(group_summary.to_string(index=False))
 
     # Save
     out_path = os.path.splitext(file_path)[0] + "_clustered.csv"
@@ -229,6 +297,9 @@ def main():
     for cid in sorted(cluster_keywords.keys()):
         print(f"Cluster {cid} ({cluster_labels[cid]}): {cluster_keywords[cid]}")
 
+    print("\n=== Topic Group counts (4 groups) ===")
+    print(df["topic_group"].value_counts(dropna=False))
+
     print("\n=== Sentiment counts ===")
     print(df["sentiment"].value_counts(dropna=False))
 
@@ -238,7 +309,7 @@ def main():
     print("\n=== Sentiment confidence quick stats ===")
     print(df["sentiment_confidence"].describe())
 
-    print(f"\nSaved (with scenario + certainty + ML sentiment): {out_path}")
+    print(f"\nSaved (with 4-group topic + scenario + certainty + ML sentiment): {out_path}")
 
 
 if __name__ == "__main__":

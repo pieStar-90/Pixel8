@@ -1,0 +1,135 @@
+{
+  "generated_at_utc": "2026-01-31 07:59:00+00:00",
+  "totals": {
+    "rows": 500,
+    "priority_counts": {
+      "medium": 324,
+      "low": 120,
+      "high": 56
+    },
+    "scenario_counts": {
+      "service/incident": 380,
+      "other/unclear": 120
+    },
+    "sentiment_counts": {
+      "negative": 389,
+      "neutral": 65,
+      "positive": 46
+    },
+    "review_required_count": 4
+  },
+  "top_clusters": [
+    {
+      "cluster_id": 1,
+      "cluster_label": "loading, error, error message",
+      "scenario": "service/incident",
+      "mentions": 58,
+      "avg_risk": 70.8,
+      "max_risk": 78,
+      "avg_confidence": 0.72,
+      "examples": [
+        "getting an error message again today. Please stay alert.",
+        "stuck on loading worked fine yesterday 😡 keeps looping",
+        "getting an error message when trying to transfer — please fix this #banking keeps looping"
+      ]
+    },
+    {
+      "cluster_id": 7,
+      "cluster_label": "online banking, online, banking",
+      "scenario": "service/incident",
+      "mentions": 37,
+      "avg_risk": 66.6,
+      "max_risk": 75,
+      "avg_confidence": 0.7,
+      "examples": [
+        "online banking is super slow since this morning #dubai Can anyone confirm?",
+        "online banking is super slow, timing out — anyone else? — since this morning",
+        "online banking is super slow, timing out — please fix this #banking Take with a grain of salt."
+      ]
+    },
+    {
+      "cluster_id": 2,
+      "cluster_label": "card, thread, keeps",
+      "scenario": "service/incident",
+      "mentions": 214,
+      "avg_risk": 60.6,
+      "max_risk": 72,
+      "avg_confidence": 0.77,
+      "examples": [
+        "payments failing please fix this keeps looping",
+        "login keeps failing is it just me? #dubai Hope it's not true.",
+        "app keeps crashing after the update — again today #app anyone else?"
+      ]
+    },
+    {
+      "cluster_id": 3,
+      "cluster_label": "seeing, banking feels, right seeing",
+      "scenario": "service/incident",
+      "mentions": 44,
+      "avg_risk": 54.0,
+      "max_risk": 63,
+      "avg_confidence": 0.71,
+      "examples": [
+        "The mobile app seems slow; I'm seeing payment declines when trying to pay a bill.",
+        "The mobile app seems unstable; I'm seeing connection errors when trying to pay a bill.",
+        "The mobile app seems intermittent; I'm seeing payment declines when trying to make a transfer."
+      ]
+    },
+    {
+      "cluster_id": 0,
+      "cluster_label": "repeatedly, app right, getting login",
+      "scenario": "service/incident",
+      "mentions": 27,
+      "avg_risk": 55.4,
+      "max_risk": 59,
+      "avg_confidence": 0.68,
+      "examples": [
+        "Fees feel confusing. #app",
+        "seeing unverified claims about policy changes. Sounds unverified. — anyone else?",
+        "seeing unverified claims about policy changes. Hope it's not true. 😡 right now"
+      ]
+    },
+    {
+      "cluster_id": 6,
+      "cluster_label": "public discussion, public, discussion",
+      "scenario": "other/unclear",
+      "mentions": 33,
+      "avg_risk": 24.8,
+      "max_risk": 35,
+      "avg_confidence": 0.63,
+      "examples": [
+        "Public discussion around customer service is trending mixed this week.",
+        "Public discussion around card benefits and rewards is trending negative this week.",
+        "Public discussion around customer service is trending negative this week."
+      ]
+    },
+    {
+      "cluster_id": 4,
+      "cluster_label": "official, verify, verify official",
+      "scenario": "other/unclear",
+      "mentions": 67,
+      "avg_risk": 23.8,
+      "max_risk": 33,
+      "avg_confidence": 0.68,
+      "examples": [
+        "OTP not arriving support line is busy 🚨 Sharing so others don't fall for it.",
+        "Support is taking forever to respond. 🙌 This is happening a lot lately.",
+        "people saying accounts are being frozen. Sounds unverified. #uae"
+      ]
+    },
+    {
+      "cluster_id": 5,
+      "cluster_label": "messages, seeing mentions, mentions",
+      "scenario": "other/unclear",
+      "mentions": 20,
+      "avg_risk": 23.6,
+      "max_risk": 26,
+      "avg_confidence": 0.72,
+      "examples": [
+        "Seeing mentions of OTP scam calls; messages sound convincing but could be fraudulent.",
+        "Warning posts about fake loan offer messages going around — please be careful and verify via official channels.",
+        "Seeing mentions of fake support chat links; messages sound convincing but could be fraudulent."
+      ]
+    }
+  ]
+}
