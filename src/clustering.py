@@ -8,6 +8,7 @@ from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 
 from sentiment_ml import train_sentiment_model, predict_sentiment
+from topic_ml import train_topic_model, predict_topic
 
 
 def map_cluster_to_scenario(cluster_keywords_or_label):
@@ -59,56 +60,6 @@ def map_cluster_to_scenario(cluster_keywords_or_label):
     return "other/unclear"
 
 
-def map_cluster_to_topic_group(cluster_keywords_or_label):
-    """
-    Collapse clusters into exactly 4 groups:
-      - general_feedback
-      - brand_sentiment
-      - service_outage
-      - scam_rumour
-
-    Explainable: keyword scoring on cluster top TF-IDF terms.
-    """
-    if isinstance(cluster_keywords_or_label, (list, tuple)):
-        text = " ".join(cluster_keywords_or_label).lower()
-    else:
-        text = str(cluster_keywords_or_label).lower()
-
-    service_outage_terms = [
-        "outage", "down", "login", "log in", "slow", "error", "failed", "declined",
-        "payment", "atm", "withdrawal", "transfer", "timeout", "timing out", "crash",
-        "stuck", "loading", "glitch", "unusable", "online banking", "app"
-    ]
-
-    scam_rumour_terms = [
-        "otp", "phishing", "scam", "fraud", "fake", "spoof", "impersonat", "skimming",
-        "sms", "whatsapp", "suspicious", "link",
-        "rumor", "unverified", "claim", "breach", "data breach", "leak", "freeze", "frozen"
-    ]
-
-    brand_sentiment_terms = [
-        "good", "great", "helpful", "smooth", "terrible", "poor", "bad",
-        "fees", "charges", "rewards", "benefits", "experience", "customer service",
-        "love", "hate", "appreciate", "disappointing", "happy", "impressed"
-    ]
-
-    def score(terms):
-        return sum(1 for t in terms if t in text)
-
-    s_service = score(service_outage_terms)
-    s_scam = score(scam_rumour_terms)
-    s_brand = score(brand_sentiment_terms)
-
-    # Priority order: scam > outage > brand > general
-    if s_scam >= 1 and s_scam >= s_service:
-        return "scam_rumour"
-    if s_service >= 1 and s_service >= s_brand:
-        return "service_outage"
-    if s_brand >= 1:
-        return "brand_sentiment"
-    return "general_feedback"
-
-
 def compute_certainty(df: pd.DataFrame, channel_col: str = "channel", likes_col: str = "likes") -> pd.Series:
     """
     Certainty score: 1..10
@@ -152,21 +103,20 @@ def cluster_topics(
     channel_col="channel",
     likes_col="likes",
     top_k_words=6,
-    candidate_k=(7, 8),  # keep tight if you want stability; widen if you prefer
+    candidate_k=(7, 8),
     save_output=True,
-    sentiment_train_path="data/sentiment_train.csv"
+    sentiment_train_path="data/sentiment_train.csv",
+    topic_train_path="data/topic_train.csv",
+    run_kmeans=True
 ):
     """
-    Topic clustering (explainable) using TF-IDF + KMeans.
-
-    Adds:
-      - cluster_id
-      - cluster_label
-      - scenario_from_cluster
-      - topic_group (4 buckets)
-      - certainty (1..10)
-      - sentiment (ML)
-      - sentiment_confidence (ML)
+    Pipeline:
+      - (optional) KMeans clustering for explainable cluster labels + scenario mapping
+      - ML sentiment (positive/negative/neutral)
+      - ML 3-topic classification (topic_group + confidence):
+          service_outage | scam_rumour | general_feedback
+      - certainty score
+      - save *_clustered.csv
     """
     # Resolve file path
     if os.path.isdir(data_path):
@@ -186,103 +136,105 @@ def cluster_topics(
 
     texts = df[text_col].fillna("").astype(str)
 
-    # TF-IDF
-    vectorizer = TfidfVectorizer(
-        lowercase=True,
-        stop_words="english",
-        ngram_range=(1, 2),
-        min_df=2,
-        max_df=0.9
-    )
-    X = vectorizer.fit_transform(texts)
+    # -----------------------
+    # Optional: KMeans clustering (for explainable clusters)
+    # -----------------------
+    cluster_keywords, cluster_labels = {}, {}
 
-    # Auto-pick K via silhouette
-    best_k, best_sil = None, -1
-    for k in candidate_k:
-        km = KMeans(n_clusters=k, random_state=42, n_init="auto")
-        labels = km.fit_predict(X)
-        sil = silhouette_score(X, labels)
-        if sil > best_sil:
-            best_k, best_sil = k, sil
+    if run_kmeans:
+        vectorizer = TfidfVectorizer(
+            lowercase=True,
+            stop_words="english",
+            ngram_range=(1, 2),
+            min_df=2,
+            max_df=0.9
+        )
+        X = vectorizer.fit_transform(texts)
 
-    print(f"[Clustering] Auto-selected k={best_k} (silhouette={best_sil:.3f})")
+        best_k, best_sil = None, -1
+        for k in candidate_k:
+            km = KMeans(n_clusters=k, random_state=42, n_init="auto")
+            labels = km.fit_predict(X)
+            sil = silhouette_score(X, labels)
+            if sil > best_sil:
+                best_k, best_sil = k, sil
 
-    # Fit final model
-    kmeans = KMeans(n_clusters=best_k, random_state=42, n_init="auto")
-    df["cluster_id"] = kmeans.fit_predict(X)
+        print(f"[Clustering] Auto-selected k={best_k} (silhouette={best_sil:.3f})")
 
-    # Label clusters using top keywords
-    feature_names = np.array(vectorizer.get_feature_names_out())
-    centers = kmeans.cluster_centers_
+        kmeans = KMeans(n_clusters=best_k, random_state=42, n_init="auto")
+        df["cluster_id"] = kmeans.fit_predict(X)
 
-    cluster_keywords = {}
-    cluster_labels = {}
+        feature_names = np.array(vectorizer.get_feature_names_out())
+        centers = kmeans.cluster_centers_
 
-    for cid in range(best_k):
-        top_idx = centers[cid].argsort()[::-1][:top_k_words]
-        keywords = feature_names[top_idx].tolist()
-        cluster_keywords[cid] = keywords
-        cluster_labels[cid] = ", ".join(keywords[:3])
+        for cid in range(best_k):
+            top_idx = centers[cid].argsort()[::-1][:top_k_words]
+            keywords = feature_names[top_idx].tolist()
+            cluster_keywords[cid] = keywords
+            cluster_labels[cid] = ", ".join(keywords[:3])
 
-    df["cluster_label"] = df["cluster_id"].map(cluster_labels)
+        df["cluster_label"] = df["cluster_id"].map(cluster_labels)
 
-    # Scenario mapping (existing)
-    df["scenario_from_cluster"] = df["cluster_id"].map(
-        lambda cid: map_cluster_to_scenario(cluster_keywords[cid])
-    )
+        df["scenario_from_cluster"] = df["cluster_id"].map(
+            lambda cid: map_cluster_to_scenario(cluster_keywords.get(cid, df.loc[df["cluster_id"] == cid, "cluster_label"].iloc[0]))
+        )
+    else:
+        df["cluster_id"] = -1
+        df["cluster_label"] = ""
+        df["scenario_from_cluster"] = "other/unclear"
 
-    # NEW: Collapse clusters into exactly 4 groups
-    df["topic_group"] = df["cluster_id"].map(
-        lambda cid: map_cluster_to_topic_group(cluster_keywords[cid])
-    )
-
-    group_id_map = {
-        "general_feedback": 0,
-        "brand_sentiment": 1,
-        "service_outage": 2,
-        "scam_rumour": 3
-    }
-    df["topic_group_id"] = df["topic_group"].map(group_id_map).fillna(0).astype(int)
-
-    # Certainty score (1..10)
+    # -----------------------
+    # Certainty
+    # -----------------------
     df["certainty"] = compute_certainty(df, channel_col=channel_col, likes_col=likes_col)
 
-    # ML Sentiment (train -> predict)
+    # -----------------------
+    # ML Sentiment
+    # -----------------------
     if not os.path.exists(sentiment_train_path):
-        raise FileNotFoundError(
-            f"Sentiment training file not found: {sentiment_train_path}\n"
-            f"Create it with columns: '{text_col}' (or 'text') and 'label'."
-        )
+        raise FileNotFoundError(f"Sentiment training file not found: {sentiment_train_path}")
 
-    model = train_sentiment_model(sentiment_train_path, text_col=text_col, label_col="label")
-    sent_out = predict_sentiment(model, df[text_col])
+    sent_model = train_sentiment_model(sentiment_train_path, text_col=text_col, label_col="label")
+    sent_out = predict_sentiment(sent_model, df[text_col])
 
     df["sentiment"] = sent_out["sentiment_ml"]
     df["sentiment_confidence"] = sent_out["sentiment_confidence"]
 
-    # Summary tables
-    cluster_summary = (
-        df.groupby(["cluster_id", "cluster_label"])
-          .size()
-          .reset_index(name="count")
-          .sort_values("count", ascending=False)
-    )
+    # -----------------------
+    # ML 3-topic classification
+    # -----------------------
+    if not os.path.exists(topic_train_path):
+        raise FileNotFoundError(f"Topic training file not found: {topic_train_path}")
 
-    group_summary = (
-        df.groupby(["topic_group"])
-          .size()
-          .reset_index(name="count")
-          .sort_values("count", ascending=False)
-    )
+    topic_model = train_topic_model(topic_train_path, text_col=text_col, label_col="label")
+    topic_out = predict_topic(topic_model, df[text_col])
 
-    print("\n=== 4-Group Summary ===")
-    print(group_summary.to_string(index=False))
+    df["topic_group"] = topic_out["topic_group"]
+    df["topic_group_confidence"] = topic_out["topic_group_confidence"]
 
-    # Save
+    # -----------------------
+    # Sanity prints
+    # -----------------------
+    print("\n=== Topic Group counts (ML) ===")
+    print(df["topic_group"].value_counts(dropna=False))
+
+    print("\n=== Sentiment counts ===")
+    print(df["sentiment"].value_counts(dropna=False))
+
+    if run_kmeans:
+        cluster_summary = (
+            df.groupby(["cluster_id", "cluster_label"])
+              .size()
+              .reset_index(name="count")
+              .sort_values("count", ascending=False)
+        )
+    else:
+        cluster_summary = pd.DataFrame(columns=["cluster_id", "cluster_label", "count"])
+
     out_path = os.path.splitext(file_path)[0] + "_clustered.csv"
     if save_output:
         df.to_csv(out_path, index=False)
-        print(f"Saved clustered output to: {out_path}")
+        print(f"\nSaved output to: {out_path}")
 
     return df, cluster_summary, cluster_keywords, cluster_labels, out_path
 
@@ -290,26 +242,17 @@ def cluster_topics(
 def main():
     df, cluster_summary, cluster_keywords, cluster_labels, out_path = cluster_topics()
 
-    print("\n=== Cluster Summary ===")
-    print(cluster_summary.to_string(index=False))
-
-    print("\n=== Cluster Keywords (Explainability) ===")
-    for cid in sorted(cluster_keywords.keys()):
-        print(f"Cluster {cid} ({cluster_labels[cid]}): {cluster_keywords[cid]}")
-
-    print("\n=== Topic Group counts (4 groups) ===")
-    print(df["topic_group"].value_counts(dropna=False))
-
-    print("\n=== Sentiment counts ===")
-    print(df["sentiment"].value_counts(dropna=False))
+    if len(cluster_summary) > 0:
+        print("\n=== Cluster Summary ===")
+        print(cluster_summary.to_string(index=False))
 
     print("\n=== Certainty (1..10) quick stats ===")
     print(df["certainty"].describe())
 
-    print("\n=== Sentiment confidence quick stats ===")
-    print(df["sentiment_confidence"].describe())
+    print("\n=== Topic confidence quick stats ===")
+    print(df["topic_group_confidence"].describe())
 
-    print(f"\nSaved (with 4-group topic + scenario + certainty + ML sentiment): {out_path}")
+    print(f"\nSaved: {out_path}")
 
 
 if __name__ == "__main__":

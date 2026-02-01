@@ -1,0 +1,301 @@
+text,label
+"Phishing email saying my account is locked, looks fake.",scam_rumour
+Lots of phishing messages going around today.,scam_rumour
+Still getting blank screen after the update.,service_outage
+How do I enable international transactions on my card?,general_feedback
+Anyone else getting fake OTP requests?,scam_rumour
+Lots of impersonation attempts going around today.,scam_rumour
+"My transfer keeps crashing again, this is frustrating.",service_outage
+Getting an error message when I try to send money.,service_outage
+"What's the best way to reach support, phone or chat?",general_feedback
+Mobile app is unusable — error codes everywhere.,service_outage
+Be careful: the message pretends to be from support.,scam_rumour
+What's the process for account opening?,general_feedback
+Suspicious 'refund' calls asking for OTP.,scam_rumour
+How do I enable notifications on the app?,general_feedback
+Card services keeps failing; this is unacceptable.,service_outage
+Just got a SMS with a spoofed number — don’t share your OTP.,scam_rumour
+Just got a WhatsApp message with a phishing link — very suspicious.,scam_rumour
+Scam SMS saying 'update KYC now' with a link.,scam_rumour
+Mobile app is unstable — stuck on loading.,service_outage
+Anyone else seeing timeouts right now?,service_outage
+How do I enable notifications on the app?,general_feedback
+"Can’t view transactions, page won’t load.",service_outage
+Just got a WhatsApp message with a phishing link — looks fake.,scam_rumour
+Be careful: they asked for personal details.,scam_rumour
+"OTP isn’t arriving, can’t complete payments.",service_outage
+What's the process for account opening?,general_feedback
+Anyone else getting fake links?,scam_rumour
+Lots of fake OTP requests going around today.,scam_rumour
+Anyone else seeing connection problems since this morning?,service_outage
+Be careful: the link goes to a weird domain.,scam_rumour
+Is the branch open during lunch hours?,general_feedback
+Mobile app keeps timing out; this is terrible.,service_outage
+Any guidance on increasing daily limits would help.,general_feedback
+Any guidance on card delivery would help.,general_feedback
+"Random number texting OTP requests, very concerning.",scam_rumour
+Transfers failing with an error code.,service_outage
+Where do I see my IBAN in the mobile app?,general_feedback
+Where can I find the form in online banking?,general_feedback
+Is it possible to update my details without visiting a branch?,general_feedback
+How do I add a beneficiary on the app?,general_feedback
+Is it possible to change my PIN without visiting a branch?,general_feedback
+Any guidance on increasing daily limits would help.,general_feedback
+Be careful: they asked for an OTP and said it was 'urgent'.,scam_rumour
+Where can I find the limit in online banking?,general_feedback
+What's the process for chargeback requests?,general_feedback
+Where do I submit a request for international transfers?,general_feedback
+Lots of impersonation attempts going around today.,scam_rumour
+Lots of phishing messages going around today.,scam_rumour
+Everything is super slow right now.,service_outage
+Just got a phone call with a phishing link — stay alert.,scam_rumour
+Still getting crashes since this morning.,service_outage
+Still getting crashes again today.,service_outage
+Lots of spoofed numbers going around today.,scam_rumour
+Where do I submit a request for updating KYC?,general_feedback
+Be careful: they used a convincing caller ID.,scam_rumour
+Be careful: the message pretends to be from support.,scam_rumour
+Where can I find the document in online banking?,general_feedback
+Does anyone know if increasing daily limits is possible?,general_feedback
+Transfers keeps freezing; this is unacceptable.,service_outage
+Is it possible to add a beneficiary without visiting a branch?,general_feedback
+A caller tried to get my OTP; do not share details.,scam_rumour
+Where do I submit a request for closing an account?,general_feedback
+How long does it take for a new debit card to arrive?,general_feedback
+Anyone else seeing timeouts again today?,service_outage
+Can’t view my statement because of payment failures.,service_outage
+Where do I submit a request for chargeback requests?,general_feedback
+Where can I find the limit in online banking?,general_feedback
+Unverified rumor about a data breach; is this real?.,scam_rumour
+Any guidance on international transfers would help.,general_feedback
+Can’t send a transfer because of the app crashing.,service_outage
+Bill payment failed twice today.,service_outage
+Anyone else seeing blank screen right now?,service_outage
+Just got a SMS with a scam call — don’t share your OTP.,scam_rumour
+Anyone else seeing blank screen right now?,service_outage
+Can’t pay a bill because of login errors.,service_outage
+Be careful: they asked for personal details.,scam_rumour
+Is there a fee for card delivery?,general_feedback
+Can someone explain updating KYC?,general_feedback
+Can someone explain redeeming rewards?,general_feedback
+Just got a DM with a OTP request — reporting it now.,scam_rumour
+Still getting login errors right now.,service_outage
+Anyone else seeing login errors for hours?,service_outage
+How do I link my card to Apple Pay / Google Pay?,general_feedback
+Card services keeps freezing; this is frustrating.,service_outage
+Can someone explain closing an account?,general_feedback
+App freezes on the home screen.,service_outage
+Merchant terminals keep declining my card today.,service_outage
+Is there a fee for international transfers?,general_feedback
+Where do I download a bank letter for visa purposes?,general_feedback
+Can I set up scheduled transfers from the app?,general_feedback
+Anyone else seeing timeouts all day?,service_outage
+Online banking is timing out constantly.,service_outage
+Is it possible to change my PIN without visiting a branch?,general_feedback
+Unverified story about accounts being frozen; has anyone confirmed?.,scam_rumour
+Can someone explain chargeback requests?,general_feedback
+How do I reset my PIN?,general_feedback
+"My balance keeps crashing again, this is frustrating.",service_outage
+Anyone else seeing blank screen for hours?,service_outage
+Lots of scam calls going around today.,scam_rumour
+How do I reset my password on the app?,general_feedback
+Just got a WhatsApp message with a spoofed number — very suspicious.,scam_rumour
+Where can I find the fee in online banking?,general_feedback
+Can someone explain redeeming rewards?,general_feedback
+"My login is stuck again, I can’t complete anything.",service_outage
+Unverified thread about a leak; what’s the truth?.,scam_rumour
+A random number tried to request my PIN; watch out.,scam_rumour
+Transfers keeps looping; this is a mess.,service_outage
+What's the process to close an account?,general_feedback
+Payments is unstable — can’t log in.,service_outage
+Can someone explain closing an account?,general_feedback
+Transfers keeps failing; this is ridiculous.,service_outage
+Anyone else getting impersonation attempts?,scam_rumour
+How do I update my details on the app?,general_feedback
+Unverified rumor about ATM skimming; has anyone confirmed?.,scam_rumour
+Just got a phone call with a OTP request — reporting it now.,scam_rumour
+Scheduled transfer didn’t go through.,service_outage
+The app keeps failing; this is unacceptable.,service_outage
+Lots of spoofed numbers going around today.,scam_rumour
+Card services is unusable — stuck on loading.,service_outage
+Be aware of scam calls offering refunds and asking for OTP.,scam_rumour
+What's the process for chargeback requests?,general_feedback
+Card services keeps freezing; this is unacceptable.,service_outage
+Can’t check my balance because of the app crashing.,service_outage
+Still getting timeouts right now.,service_outage
+Still getting payment declines again today.,service_outage
+Just got a email with a spoofed number — don’t share your OTP.,scam_rumour
+Is it possible to reset my password without visiting a branch?,general_feedback
+Anyone else seeing crashes again today?,service_outage
+Online banking keeps failing; this is ridiculous.,service_outage
+Just got a email with a fake support message — very suspicious.,scam_rumour
+Still getting crashes since this morning.,service_outage
+Payment gateway seems down?,service_outage
+Transfers keeps freezing; this is ridiculous.,service_outage
+The app keeps logging me out.,service_outage
+Just got a DM with a KYC scam — stay alert.,scam_rumour
+Lots of impersonation attempts going around today.,scam_rumour
+Payments keeps failing; this is unacceptable.,service_outage
+"My bill payment is not updating again, urgent issue.",service_outage
+"My card payment failed again, this is frustrating.",service_outage
+Where can I find my account statement for last month?,general_feedback
+Transfer failed with no explanation.,service_outage
+Transfers is down — error codes everywhere.,service_outage
+Can’t check my balance because of timeouts.,service_outage
+"My transaction history keeps timing out again, urgent issue.",service_outage
+People saying 'ATM skimming' incidents happened — not sure if true.,scam_rumour
+A random number tried to ask for card details; do not share details.,scam_rumour
+Can’t pay a bill because of an outage.,service_outage
+Where can I find the setting in online banking?,general_feedback
+Where do I submit a request for redeeming rewards?,general_feedback
+Is there a setting for chargeback requests?,general_feedback
+Lots of fake OTP requests going around today.,scam_rumour
+Balance isn’t updating and it’s worrying.,service_outage
+Unverified thread about accounts being frozen; has anyone confirmed?.,scam_rumour
+Mobile app keeps failing; this is a mess.,service_outage
+Be careful: they asked for personal details.,scam_rumour
+Anyone else getting spoofed numbers?,scam_rumour
+Lots of fake links going around today.,scam_rumour
+Where do I submit a request for increasing daily limits?,general_feedback
+Can’t send a transfer because of timeouts.,service_outage
+How do I change my phone number on the app?,general_feedback
+Unverified claim that the app was hacked — anyone confirm?,scam_rumour
+The app keeps looping; this is frustrating.,service_outage
+Is there a fee for withdrawing cash abroad?,general_feedback
+Is it possible to enable notifications without visiting a branch?,general_feedback
+Can someone explain redeeming rewards?,general_feedback
+The app is glitchy — payments won’t go through.,service_outage
+Be careful: they asked for an OTP and said it was 'urgent'.,scam_rumour
+Be careful: the message pretends to be from support.,scam_rumour
+Online banking keeps freezing; this is unacceptable.,service_outage
+How do I enable notifications on the app?,general_feedback
+How do I change my address on the app?,general_feedback
+Rumors about accounts being frozen are spreading online.,scam_rumour
+Anyone else getting scam calls?,scam_rumour
+What's the process for redeeming rewards?,general_feedback
+Any guidance on account opening would help.,general_feedback
+Lots of fake links going around today.,scam_rumour
+Still getting crashes after the update.,service_outage
+What's the process for closing an account?,general_feedback
+Anyone else getting phishing messages?,scam_rumour
+"My transfer keeps timing out again, I can’t complete anything.",service_outage
+Got a call asking for my OTP — sounds like a scam.,scam_rumour
+Does anyone know the branch working hours on Fridays?,general_feedback
+A caller tried to request my PIN; do not share details.,scam_rumour
+Just got a DM with a OTP request — stay alert.,scam_rumour
+"App is down again, can’t log in.",service_outage
+Just got a email with a scam call — very suspicious.,scam_rumour
+Anyone else getting scam calls?,scam_rumour
+Anyone else seeing blank screen right now?,service_outage
+How do I download statements on the app?,general_feedback
+How do I update my details on the app?,general_feedback
+What's the process for updating KYC?,general_feedback
+The app keeps freezing; this is terrible.,service_outage
+Be careful: they used a convincing caller ID.,scam_rumour
+"Someone on WhatsApp is impersonating the bank, be careful.",scam_rumour
+Lots of spoofed numbers going around today.,scam_rumour
+Any tips for redeeming points more efficiently?,general_feedback
+Anyone else getting fake OTP requests?,scam_rumour
+A fake account tried to push a 'refund' story; please be careful.,scam_rumour
+Is it possible to change my address without visiting a branch?,general_feedback
+WhatsApp message claiming my account will be blocked unless I click a link.,scam_rumour
+Can I change my phone number without visiting a branch?,general_feedback
+Anyone else seeing login errors again today?,service_outage
+Where do I submit a request for card delivery?,general_feedback
+Caller ID looked real but it was clearly fraud.,scam_rumour
+Still getting blank screen after the update.,service_outage
+Fake support account DM’d me with a link.,scam_rumour
+Be careful: the message pretends to be from support.,scam_rumour
+Mobile app keeps failing; this is a mess.,service_outage
+Where do I submit a request for closing an account?,general_feedback
+Anyone else seeing payment declines since this morning?,service_outage
+Can’t log in because of an outage.,service_outage
+Just got a DM with a scam call — reporting it now.,scam_rumour
+Is there a minimum balance requirement for this account type?,general_feedback
+Is there a document for updating KYC?,general_feedback
+Just got a DM with a phishing link — don’t share your OTP.,scam_rumour
+How do I update my details on the app?,general_feedback
+Can someone explain adding a new payee?,general_feedback
+Be careful: they asked me to 'verify' my account via a link.,scam_rumour
+Still getting blank screen all day.,service_outage
+Does anyone know if chargeback requests is possible?,general_feedback
+Anyone else seeing crashes since this morning?,service_outage
+Anyone else getting impersonation attempts?,scam_rumour
+Someone tried to spoof a support number to get my details.,scam_rumour
+Still getting timeouts for hours.,service_outage
+Where can I find the fee in online banking?,general_feedback
+Lots of scam calls going around today.,scam_rumour
+Login loop won’t let me in.,service_outage
+Is it possible to freeze my card without visiting a branch?,general_feedback
+Saw posts about a 'data breach' but it seems unverified.,scam_rumour
+Impersonators are calling and asking for card details.,scam_rumour
+Does anyone know if chargeback requests is possible?,general_feedback
+Anyone else getting impersonation attempts?,scam_rumour
+Lots of spoofed numbers going around today.,scam_rumour
+Unverified thread about a leak; can anyone verify?.,scam_rumour
+Can’t check my balance because of payment failures.,service_outage
+Can I add a second cardholder on my account?,general_feedback
+Is there a setting for card delivery?,general_feedback
+How do I change my PIN on the app?,general_feedback
+Anyone else getting fake links?,scam_rumour
+Lots of phishing messages going around today.,scam_rumour
+Lots of fake OTP requests going around today.,scam_rumour
+Received an SMS with a suspicious link pretending to be support.,scam_rumour
+Still getting login errors all day.,service_outage
+Any guidance on international transfers would help.,general_feedback
+Seeing fake promo messages that ask for personal info.,scam_rumour
+"My balance is stuck again, this is frustrating.",service_outage
+Anyone else seeing connection problems after the update?,service_outage
+Just got a WhatsApp message with a KYC scam — reporting it now.,scam_rumour
+Anyone else getting fake OTP requests?,scam_rumour
+Is there a way to increase my transfer limit temporarily?,general_feedback
+The app keeps crashing after the update.,service_outage
+Where do I submit a request for card delivery?,general_feedback
+Anyone else seeing timeouts again today?,service_outage
+How do I update my email address on the app?,general_feedback
+"My balance is not updating again, I can’t complete anything.",service_outage
+Transfers are stuck pending for hours.,service_outage
+Can someone explain chargeback requests?,general_feedback
+How do I update my details on the app?,general_feedback
+Getting lots of fake 'verify your account' messages.,scam_rumour
+Is it possible to update my Emirates ID without visiting a branch?,general_feedback
+Is it possible to update my details without visiting a branch?,general_feedback
+Does anyone know if chargeback requests is possible?,general_feedback
+Anyone else getting impersonation attempts?,scam_rumour
+How do I dispute a transaction?,general_feedback
+What's the process for international transfers?,general_feedback
+Still getting crashes after the update.,service_outage
+A scammer tried to request my PIN; do not click links.,scam_rumour
+Anyone else seeing login errors all day?,service_outage
+Anyone else getting spoofed numbers?,scam_rumour
+Unverified rumor about accounts being frozen; is this real?.,scam_rumour
+Is it possible to update my Emirates ID without visiting a branch?,general_feedback
+Where can I find the setting in online banking?,general_feedback
+Payments is unstable — can’t log in.,service_outage
+Still getting payment declines again today.,service_outage
+Unverified rumor about accounts being frozen; can anyone verify?.,scam_rumour
+"My card payment won’t load again, need a fix asap.",service_outage
+Payments is slow — payments won’t go through.,service_outage
+Does anyone know if increasing daily limits is possible?,general_feedback
+How do I add a beneficiary on the app?,general_feedback
+Just got a SMS with a OTP request — stay alert.,scam_rumour
+Just got a DM with a KYC scam — stay alert.,scam_rumour
+Does anyone know if international transfers is possible?,general_feedback
+Transfers keeps freezing; this is frustrating.,service_outage
+A random number tried to ask for card details; please be careful.,scam_rumour
+Card services is broken — stuck on loading.,service_outage
+Anyone else getting scam calls?,scam_rumour
+Mobile app is slow — error codes everywhere.,service_outage
+Can’t check my balance because of the app crashing.,service_outage
+"My bill payment keeps crashing again, I can’t complete anything.",service_outage
+Can someone explain account opening?,general_feedback
+Any guidance on adding a new payee would help.,general_feedback
+Lots of phishing links in comments today.,scam_rumour
+Still getting timeouts again today.,service_outage
+Lots of fake OTP requests going around today.,scam_rumour
+Is there a form for redeeming rewards?,general_feedback
+Still getting payment declines since this morning.,service_outage
+Where can I find the document in online banking?,general_feedback
+ATM didn’t dispense cash but my account was debited.,service_outage
+Be careful: the message pretends to be from support.,scam_rumour
+Card payment got declined even though I have funds.,service_outage
