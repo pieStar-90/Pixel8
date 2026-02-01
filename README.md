@@ -2,6 +2,7 @@
 
 
 Mashreq 🛡 Signal Dashboard
+Challenge Title: AI for Social Signal Intelligence in Banking
 
 -> Project Overview
 
